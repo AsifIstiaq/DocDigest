@@ -1,4 +1,4 @@
-📄 DocDigest – Instantly Summarize Your PDFs
+#📄 DocDigest – Instantly Summarize Your PDFs
 
 DocDigest is a modern web application that allows users to upload PDF documents and generate concise, AI-powered summaries in seconds. Built using the latest technologies like Next.js and Clerk for authentication, DocDigest is perfect for students, researchers, and professionals looking to save time and quickly understand lengthy documents.
 
