@@ -16,7 +16,10 @@ const Header = () => {
       </div>
       <div className="flex lg:justify-center gap-4 lg:gap-12 lg:items-center">
         <SignedIn>
-          <Button className="bg-white border border-gray-900 rounded-full hover:bg-gray-300 hover:scale-105">
+          <Button
+            size={"sm"}
+            className="bg-white border border-gray-900 rounded-full hover:bg-gray-300 hover:scale-105"
+          >
             <NavLink href="/dashboard">Your Summaries</NavLink>
           </Button>
         </SignedIn>
@@ -24,7 +27,10 @@ const Header = () => {
       <div className="flex lg:justify-end lg:flex-1">
         <SignedIn>
           <div className="flex gap-2 items-center">
-            <Button className="bg-white border border-gray-900 rounded-full hover:bg-gray-300 hover:scale-105">
+            <Button
+              size={"sm"}
+              className="bg-white border border-gray-900 rounded-full hover:bg-gray-300 hover:scale-105"
+            >
               <NavLink href="/upload">Upload a PDF</NavLink>
             </Button>
             <SignedIn>
