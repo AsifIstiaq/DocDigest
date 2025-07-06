@@ -33,7 +33,7 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
-import tailwindcss from "eslint-plugin-tailwindcss"; // 👈 required for plugin in flat config
+import tailwindcss from "eslint-plugin-tailwindcss";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -47,11 +47,11 @@ const eslintConfig = [
 
   {
     plugins: {
-      tailwindcss, // 👈 plugin object, not just a string
+      tailwindcss,
     },
     rules: {
       // optional: tweak rules
-      "tailwindcss/classnames-order": "warn",
+      // "tailwindcss/classnames-order": "warn",
       "react/no-escape-entities": "off",
     },
   },

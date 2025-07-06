@@ -37,8 +37,8 @@ export default function UploadForm({ summaries }: { summaries: number }) {
         description: err.message,
       });
     },
-    onUploadBegin: ({ file }) => {
-      console.log("Upload has begun for", file);
+    onUploadBegin: (upload) => {
+      console.log("Upload has begun for", upload);
     },
   });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
