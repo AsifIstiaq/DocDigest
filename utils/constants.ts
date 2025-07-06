@@ -16,10 +16,9 @@ export const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 15,
       stiffness: 50,
-      duration: 0.8,
     },
   },
 };
