@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📄 DocDigest – Instantly Summarize Your PDFs
 
-## Getting Started
+DocDigest is a modern web application that allows users to upload PDF documents and generate concise, AI-powered summaries in seconds. Built using the latest technologies like Next.js and Clerk for authentication, DocDigest is perfect for students, researchers, and professionals looking to save time and quickly understand lengthy documents.
 
-First, run the development server:
+🚀 Features
+• 📁 Upload PDF files easily
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+• ⚡ Generate AI summaries instantly
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+• 🔐 Secure authentication with Clerk
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+• ☁️ Cloud-based file handling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+• 📊 Track and manage your summaries
 
-## Learn More
+🧪 Tech Stack
+• Next.js (App Router)
 
-To learn more about Next.js, take a look at the following resources:
+• Clerk Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+• UploadThing for file uploads
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+• Google Gemini API for AI summarization
 
-## Deploy on Vercel
+• Neon/PostgreSQL for database
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔐 Environment Variables
+To run this project locally, create a .env.local file in the root directory and add the following environment variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+UPLOADTHING_TOKEN=your_uploadthing_token
+GEMINI_API_KEY=your_google_gemini_api_key
+DATABASE_URL=your_postgresql_database_url
+
+Make sure all required credentials and keys are securely stored and not exposed in public repositories.
