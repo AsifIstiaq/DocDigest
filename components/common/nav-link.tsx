@@ -20,7 +20,7 @@ export default function NavLink({
     <Link
       href={href}
       className={cn(
-        "transition-colors text-sm duration-200 text-gray-600 hover:text-gray-900",
+        "transition-colors text-sm duration-200 text-gray-600 hover:text-gray-900 font-semibold",
         className,
         isActive && "text-blue-600"
       )}
