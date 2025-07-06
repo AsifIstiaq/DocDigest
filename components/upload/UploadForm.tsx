@@ -82,7 +82,6 @@ export default function UploadForm({ summaries }: { summaries: number }) {
       });
 
       const result = await generatePdfSummary(resp);
-      console.log(resp);
 
       const { data = null } = result || {};
 
