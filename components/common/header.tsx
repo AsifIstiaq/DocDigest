@@ -22,12 +22,7 @@ const Header = () => {
       <div className="flex lg:justify-end lg:flex-1">
         <SignedIn>
           <div className="flex gap-2 items-center">
-            <Button
-              size="sm"
-              className="bg-white border border-gray-900 rounded-full hover:bg-gray-300 hover:scale-105"
-            >
-              <NavLink href="/upload">Upload a PDF</NavLink>
-            </Button>
+            <NavLink href="/upload">Upload a PDF</NavLink>
             <SignedIn>
               <UserButton />
             </SignedIn>
