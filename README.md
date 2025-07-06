@@ -27,10 +27,10 @@ DocDigest is a modern web application that allows users to upload PDF documents 
 🔐 Environment Variables
 To run this project locally, create a .env.local file in the root directory and add the following environment variables:
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-UPLOADTHING_TOKEN=your_uploadthing_token
-GEMINI_API_KEY=your_google_gemini_api_key
-DATABASE_URL=your_postgresql_database_url
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key;
+CLERK_SECRET_KEY=your_clerk_secret_key;
+UPLOADTHING_TOKEN=your_uploadthing_token;
+GEMINI_API_KEY=your_google_gemini_api_key;
+DATABASE_URL=your_postgresql_database_url;
 
 Make sure all required credentials and keys are securely stored and not exposed in public repositories.
