@@ -7,6 +7,15 @@ import { formatDistanceToNow } from "date-fns";
 import { MotionDiv } from "../common/MotionWrapper";
 import { itemVariants } from "@/utils/constants";
 
+type Summary = {
+  id: string;
+  original_file_url: string;
+  summary_text: string;
+  status: string;
+  title: string | null;
+  created_at: string;
+};
+
 const SummaryHeader = ({
   fileUrl,
   title,
@@ -46,7 +55,7 @@ const StatusBadge = ({ status }: { status: string }) => {
   );
 };
 
-export default function SummaryCard({ summary }: { summary: any }) {
+export default function SummaryCard({ summary }: { summary: Summary }) {
   return (
     <MotionDiv
       variants={itemVariants}

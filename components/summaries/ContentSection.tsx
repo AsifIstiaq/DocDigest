@@ -26,13 +26,7 @@ const RegularPoint = ({ point }: { point: string }) => {
   );
 };
 
-export default function ContentSection({
-  title,
-  points,
-}: {
-  title: string;
-  points: string[];
-}) {
+export default function ContentSection({ points }: { points: string[] }) {
   return (
     <div key={points.join("")} className="space-y-4">
       {points.map((point, index) => {
