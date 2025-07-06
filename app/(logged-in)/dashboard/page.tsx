@@ -9,6 +9,7 @@ import Link from "next/link";
 import EmptySummaryState from "@/components/summaries/EmptySummaryState";
 import { MotionDiv, MotionH1 } from "@/components/common/MotionWrapper";
 import { itemVariants } from "@/utils/constants";
+import { Summary } from "@/utils/summaries";
 
 export default async function DashboardPage() {
   const user = await currentUser();
@@ -17,7 +18,7 @@ export default async function DashboardPage() {
     return redirect("/sign-in");
   }
   const uploadLimit = 5;
-  const summaries = await getSummaries(userId);
+  const summaries: Summary[] = await getSummaries(userId);
   return (
     <main className="min-h-screen">
       <BgGradient className="from-blue-400 via-blue-300 to-blue-200" />

@@ -6,15 +6,7 @@ import { cn, formatFileName } from "@/lib/utils";
 import { formatDistanceToNow } from "date-fns";
 import { MotionDiv } from "../common/MotionWrapper";
 import { itemVariants } from "@/utils/constants";
-
-type Summary = {
-  id: string;
-  original_file_url: string;
-  summary_text: string;
-  status: string;
-  title: string | null;
-  created_at: string;
-};
+import { Summary } from "@/utils/summaries";
 
 const SummaryHeader = ({
   fileUrl,
