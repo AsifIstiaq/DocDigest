@@ -16,19 +16,12 @@ interface PdfSummaryType {
 }
 
 export async function generatePdfSummary(
-  uploadResponse: [
-    {
-      serverData: {
-        userId: string;
-        file: {
-          url: string;
-          name: string;
-        };
-      };
-    }
-  ]
+  uploadResponse: Array<{
+    url: string;
+    name: string;
+  }>
 ) {
-  if (!uploadResponse) {
+  if (!uploadResponse || uploadResponse.length === 0) {
     return {
       success: false,
       message: "File upload failed",
@@ -36,12 +29,7 @@ export async function generatePdfSummary(
     };
   }
 
-  const {
-    serverData: {
-      userId,
-      file: { url: pdfUrl, name: fileName },
-    },
-  } = uploadResponse[0];
+  const { url: pdfUrl, name: fileName } = uploadResponse[0];
 
   if (!pdfUrl) {
     return {
@@ -79,10 +67,10 @@ export async function generatePdfSummary(
         summary,
       },
     };
-  } catch (err) {
+  } catch (error) {
     return {
       success: false,
-      message: "File upload failed",
+      message: error,
       data: null,
     };
   }
@@ -131,7 +119,7 @@ export async function storePdfSummaryAction({
   title,
   fileName,
 }: PdfSummaryType) {
-  let savedSummary: any;
+  let savedSummary;
   try {
     const { userId } = await auth();
     if (!userId) {

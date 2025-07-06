@@ -82,19 +82,19 @@ export default function UploadForm({ summaries }: { summaries: number }) {
       });
 
       const result = await generatePdfSummary(resp);
+      console.log(resp);
 
-      const { data = null, message = null } = result || {};
+      const { data = null } = result || {};
 
       if (data) {
-        let storeResult: any;
         toast.success("Saving PDF...", {
           description: "Please hold on while we save your summary.",
         });
 
         if (data.summary) {
-          storeResult = await storePdfSummaryAction({
+          const storeResult = await storePdfSummaryAction({
             summary: data.summary,
-            fileUrl: resp[0].serverData.file.url,
+            fileUrl: resp[0].serverData.file,
             title: data.title,
             fileName: file.name,
           });
@@ -105,7 +105,7 @@ export default function UploadForm({ summaries }: { summaries: number }) {
           });
 
           formRef.current?.reset();
-          router.push(`/summaries/${storeResult.data.id}`);
+          router.push(`/summaries/${storeResult?.data?.id}`);
         }
       }
     } catch (error) {
