@@ -34,7 +34,7 @@ export const generateSummaryFromGeminiAI = async (pdfText: string) => {
       throw new Error("Empty response from Gemini API");
     }
     return response.text();
-  } catch (error: any) {
+  } catch (error) {
     console.error("Gemini API Error:", error);
     throw error;
   }

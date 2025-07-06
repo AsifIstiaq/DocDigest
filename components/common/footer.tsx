@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MotionDiv, MotionP } from "./MotionWrapper";
 
 const Footer = () => {
@@ -11,15 +12,15 @@ const Footer = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-wrap items-center justify-center gap-6"
           >
-            <a href="/" className="text-sm hover:underline">
+            <Link href="/" className="text-sm hover:underline">
               Home
-            </a>
-            <a href="#" className="text-sm hover:underline">
+            </Link>
+            <Link href="#" className="text-sm hover:underline">
               Contact Us
-            </a>
-            <a href="#" className="text-sm hover:underline">
+            </Link>
+            <Link href="#" className="text-sm hover:underline">
               FAQs
-            </a>
+            </Link>
           </MotionDiv>
 
           <MotionP

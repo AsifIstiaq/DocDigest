@@ -10,7 +10,7 @@ export const ourFileRouter = {
       maxFileSize: "32MB",
     },
   })
-    .middleware(async ({ req }) => {
+    .middleware(async () => {
       const user = await currentUser();
       if (!user) throw new UploadThingError("Unauthorized");
       return { userId: user.id };
